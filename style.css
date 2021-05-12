@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+}
+
+.calculator{
+  background: rgb(236, 236, 236);
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px #868683;
+}
+.calculator-display{
+  background:transparent;
+  box-shadow: inset 2px 2px 5px #868683, inset 2px 2px 5px #868683; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+  min-height: 80px;
+
+}
+.calculator-display h1{
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  color:rgb(88, 88, 88);
+  font-size: 45px;
+  overflow-x: auto;
+  padding: 5px 10px;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+/* Button */
+
+.calculator-buttons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  height: 320px;
+}
+button{
+  min-height: 5px;
+  font-size: 25px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgb(199, 198, 198);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  padding: 10px 5px;
+  text-align: center;
+  color: rgb(22, 17, 17);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .1s;
+}
+button:hover{
+  transform: scale(1.01);
+  filter: brightness(110%);
+}
+button:active{
+  transform: scale(0.96);
+}
+
+.operator{
+  font-size: 40px;
+  background: rgb(119, 117, 117);
+  color: white;
+}
+.equal-sign{
+  grid-column: 4 / span 1;
+  grid-row: 2 / span 4;
+  background: rgb(13,206,87);
+}
+.clear{
+  background: rgb(245, 48, 48);
+  color: white;
+}
+.clear:hover{
+  filter: brightness(90%);
+}
+
+
+@media (max-width:600px) {
+  .calculator{
+    width: 95% ;
+  }
+}
